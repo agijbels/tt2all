@@ -1,0 +1,5 @@
+﻿trackingtime2redmine/.vs
+trackingtime2redmine/packages
+trackingtime2redmine/TrackingTime2Redmine/bin
+trackingtime2redmine/TrackingTime2Redmine/obj
+*.config

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<time_entry_activities type="array">
+	<time_entry_activity>
+		<id>8</id>
+		<name>Design</name>
+		<is_default>false</is_default>
+	</time_entry_activity>
+	<time_entry_activity>
+		<id>9</id>
+		<name>Development</name>
+		<is_default>true</is_default>
+	</time_entry_activity>
+	<time_entry_activity>
+		<id>10</id>
+		<name>Functional Analysis</name>
+		<is_default>false</is_default>
+	</time_entry_activity>
+	<time_entry_activity>
+		<id>11</id>
+		<name>Technical Analysis</name>
+		<is_default>false</is_default>
+	</time_entry_activity>
+	<time_entry_activity>
+		<id>25</id>
+		<name>Tech. Analysis / R &amp; D</name>
+		<is_default>false</is_default>
+	</time_entry_activity>
+	<time_entry_activity>
+		<id>12</id>
+		<name>R &amp; D</name>
+		<is_default>false</is_default>
+	</time_entry_activity>
+	<time_entry_activity>
+		<id>13</id>
+		<name>Installation</name>
+		<is_default>false</is_default>
+	</time_entry_activity>
+	<time_entry_activity>
+		<id>14</id>
+		<name>Customer premises</name>
+		<is_default>false</is_default>
+	</time_entry_activity>
+	<time_entry_activity>
+		<id>15</id>
+		<name>Testing</name>
+		<is_default>false</is_default>
+	</time_entry_activity>
+	<time_entry_activity>
+		<id>23</id>
+		<name>Costs</name>
+		<is_default>false</is_default>
+	</time_entry_activity>
+	<time_entry_activity>
+		<id>37</id>
+		<name>Holiday</name>
+		<is_default>false</is_default>
+	</time_entry_activity>
+</time_entry_activities>

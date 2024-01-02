@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackingTime2Redmine", "TrackingTime2Redmine\TrackingTime2Redmine.csproj", "{F611B91A-42AF-436F-95E9-CB9E27E3BED5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F611B91A-42AF-436F-95E9-CB9E27E3BED5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F611B91A-42AF-436F-95E9-CB9E27E3BED5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F611B91A-42AF-436F-95E9-CB9E27E3BED5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F611B91A-42AF-436F-95E9-CB9E27E3BED5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CCEEBD2A-874B-4575-83E5-6C39C1041013}
+	EndGlobalSection
+EndGlobal
