@@ -13,10 +13,15 @@ namespace TrackingTime2Redmine
         //private List<Datum> _mappedTtEntries;
         public List<MapEntry> _mappedEntries { get; set; }
         public List<RMEntry> _rmEntries { get; set; }
+        public List<JrEntry> _jrEntries { get; set; }
 
-        public List<TimeEntry> GetRMTimeEntries()
+        public List<RmTimeEntry> GetRMTimeEntries()
         {
             return _rmEntries.Select(rmEntry => rmEntry.time_entry).ToList();
+        }
+        public List<JrTimeEntry> GetJrTimeEntries()
+        {
+            return _jrEntries.Select(jrEntry => jrEntry.time_entry).ToList();
         }
 
         public EntryMapper(DateTime fromDate, DateTime toDate)
@@ -28,35 +33,67 @@ namespace TrackingTime2Redmine
             _unmappedTtEntries = entries.data.OfType<Datum>().ToList();
             _mappedEntries = new List<MapEntry>();
             _rmEntries = new List<RMEntry>();
+            _jrEntries = new List<JrEntry>();
         }
 
-        public void StartMapping()
+        public void StartMapping(bool mapRedmineEntries, bool mapJiraEntries)
         {
             _mappedEntries = new List<MapEntry>();
-            // TODO: Soms is event.task niet ingevuld!
-            List<Datum> entriesToMap = _unmappedTtEntries.Where(entry => (entry.event_type == "WORK" && entry.task.Contains(" #"))).ToList();
+            List<Datum> entriesToMap = _unmappedTtEntries.Where(entry => (entry.event_type == "WORK") ).ToList();
             _unmappedTtEntries.RemoveAll(entry => entriesToMap.Contains(entry));
 
-            var entriesGroupedByDateAndTask = entriesToMap.GroupBy(entry => $"{entry.GetDate().ToString("yyyyMMdd")}_{entry.GetRmTicket()}");
+            TtApiService ttService = new TtApiService();
+            ttService.InitialSetup();
+            var jrService = new JrApiService();
+            jrService.InitialSetup();
+            var entriesGroupedByDateAndTask = entriesToMap.GroupBy(entry => $"{entry.GetDate().ToString("yyyyMMdd")}_{entry.GetRmTicket()}_{jrService.GetIssueIDFromKey(ttService.GetJiraIdFromTaskID(entry.task_id.ToString()))}");
+
             foreach (var group in entriesGroupedByDateAndTask)
             {
                 var mapEntry = new MapEntry();
-                mapEntry.Activity = RMActivity.Development;
+                mapEntry.Title = group.First().task;
+                mapEntry.RmActivity = RMActivity.Development;
                 mapEntry.RmTask = group.First().GetRmTicket();
+
+                if (mapEntry.RmTask == -1)
+                {
+                    var akey = ttService.GetJiraIdFromTaskID(group.First().task_id.ToString());
+                    mapEntry.JrTask = jrService.GetIssueIDFromKey(akey, false);
+                    mapEntry.JrKey = akey;
+                }
+                else
+                {
+                    mapEntry.JrTask = ""; 
+                    mapEntry.JrKey = "";
+                }
+
                 mapEntry.SpentOn = group.First().GetDate();
                 mapEntry.TotalHours = Math.Round((double)group.Sum(entry => entry.duration) / 900) / 4;
                 mapEntry.Text = string.Join(", ", group.Where(entry => (entry.notes != null)&&(!entry.notes.Equals(string.Empty))).Select(entry => entry.notes)); 
                 mapEntry.TtEntries = new List<Datum>();
                 mapEntry.TtEntries.AddRange(group);
 
-                _mappedEntries.Add(mapEntry);
+                if (mapEntry.RmTask > -1 )
+                    _mappedEntries.Add(mapEntry);
+                else if (mapEntry.JrTask != "")
+                    _mappedEntries.Add(mapEntry);
             }
         }
 
         public void MapToRmEntries()
         {
             _rmEntries = _mappedEntries
-                .Select(mapEntry => new RMEntry(mapEntry)).ToList();
+                .Where(mapEntry => mapEntry.RmTask > -1)
+                .Select(mapEntry => new RMEntry(mapEntry))
+                .ToList();
+        }
+
+        public void MapToJrEntries()
+        {
+            _jrEntries = _mappedEntries
+                .Where(mapEntry => mapEntry.JrTask != "" )
+                .Select(mapEntry => new JrEntry(mapEntry))
+                .ToList();
         }
 
         public string SendToRm()
@@ -85,5 +122,30 @@ namespace TrackingTime2Redmine
             return $"{resultSent} \n{resultError}";
         }
 
+        public string SendToJr()
+        {
+            var resultError = "";
+            var resultSent = "";
+            var jrService = new JrApiService();
+            jrService.InitialSetup();
+
+            foreach (var entry in _jrEntries)
+            {
+                var result = jrService.SendEntry(entry);
+                if (!(result == System.Net.HttpStatusCode.OK || result == System.Net.HttpStatusCode.Created))
+                {
+                    resultError += $"#{entry.issue_id} ";
+                }
+                else
+                {
+                    resultSent += $"#{entry.issue_id} ";
+                }
+            }
+
+            resultSent = resultSent.Equals(string.Empty) ? "None sent" : $"Sent {resultSent}";
+            resultError = (resultError.Equals(string.Empty) ? "No errors" : $"Error sending {resultError}");
+
+            return $"{resultSent} \n{resultError}";
+        }
     }
 }

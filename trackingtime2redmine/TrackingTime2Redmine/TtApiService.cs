@@ -30,7 +30,8 @@ namespace TrackingTime2Redmine
             var end = toDate.ToString("yyyy-MM-dd");
             TTEntries entries = new TTEntries();
 
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create( $"{_ttUrl}/events?filter=COMPANY&from={start}&to={end}");
+            // TODO Make client a parameter
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create( $"{_ttUrl}/events?filter=CUSTOMER&id=374735&from={start}&to={end}");
             request.Method = "GET";
             request.PreAuthenticate = true;
             request.Credentials = new NetworkCredential(_userName, _password);
@@ -57,6 +58,45 @@ namespace TrackingTime2Redmine
             }
 
             return entries;
+        }
+
+        public string GetJiraIdFromTaskID(string aTaskID)
+        {
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create($"{_ttUrl}/tasks/{aTaskID}");
+            request.Method = "GET";
+            request.PreAuthenticate = true;
+            request.Credentials = new NetworkCredential(_userName, _password);
+
+            try
+            {
+                HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+                using (Stream responseStream = response.GetResponseStream())
+                {
+                    StreamReader reader = new StreamReader(responseStream, Encoding.UTF8);
+                    //var res = reader.ReadToEnd();
+                    Models.Task task = new Models.Task();
+                    task = JsonConvert.DeserializeObject<Models.Task>(reader.ReadToEnd());
+
+                    return ExtractJiraIDFromJson(task.data.json);
+                }
+            }
+            catch (WebException ex)
+            {
+                WebResponse errorResponse = ex.Response;
+                using (Stream responseStream = errorResponse.GetResponseStream())
+                {
+                    StreamReader reader = new StreamReader(responseStream, Encoding.GetEncoding("utf-8"));
+                    String errorText = reader.ReadToEnd();
+                    // Log errorText
+                }
+                throw;
+            }
+        }
+
+        private string ExtractJiraIDFromJson(string json)
+        {
+            TaskDataJson taskDataJson = JsonConvert.DeserializeObject<TaskDataJson>(json);
+            return taskDataJson.button.id;
         }
     }
 }

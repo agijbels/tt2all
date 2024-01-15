@@ -30,42 +30,8 @@ namespace TrackingTime2Redmine
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.btnSendToRM_old = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.cbActivities = new System.Windows.Forms.ComboBox();
-            this.edtComments = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.edtHours = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dtSpentOn = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.edtIssueID = new System.Windows.Forms.TextBox();
             this.dataSet1 = new System.Data.DataSet();
             this.gridUnmapped = new System.Windows.Forms.DataGridView();
-            this.dtFrom = new System.Windows.Forms.DateTimePicker();
-            this.dtUntil = new System.Windows.Forms.DateTimePicker();
-            this.btGetTtEntries = new System.Windows.Forms.Button();
-            this.btnStartMapping = new System.Windows.Forms.Button();
-            this.gridMapped = new System.Windows.Forms.DataGridView();
-            this.gridRmEntries = new System.Windows.Forms.DataGridView();
-            this.btnSendToRm = new System.Windows.Forms.Button();
-            this.btnGetRmEntries = new System.Windows.Forms.Button();
-            this.boxEditEntry = new System.Windows.Forms.GroupBox();
-            this.SpentOn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RmTask = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RMText = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.activity_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TT_entries = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.issueidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.spentonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hoursDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.activityidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.commentsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.useridDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timeEntryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eventtypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.startDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.locstartDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -113,147 +79,31 @@ namespace TrackingTime2Redmine
             this.updatedatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.jsonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datumBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dtFrom = new System.Windows.Forms.DateTimePicker();
+            this.dtUntil = new System.Windows.Forms.DateTimePicker();
+            this.btGetTtEntries = new System.Windows.Forms.Button();
+            this.btnStartMapping = new System.Windows.Forms.Button();
+            this.btnSendToRm = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.gridJrEntries = new System.Windows.Forms.DataGridView();
+            this.RmTimeEntryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tTEntriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.JrTimeEntryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mapEntryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rMEntryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.groupBox2.SuspendLayout();
+            this.jrTimeEntryBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridUnmapped)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridMapped)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridRmEntries)).BeginInit();
-            this.boxEditEntry.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.timeEntryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datumBindingSource)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridJrEntries)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RmTimeEntryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tTEntriesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.JrTimeEntryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mapEntryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rMEntryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jrTimeEntryBindingSource1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnSendToRM_old
-            // 
-            this.btnSendToRM_old.Location = new System.Drawing.Point(805, 54);
-            this.btnSendToRM_old.Name = "btnSendToRM_old";
-            this.btnSendToRM_old.Size = new System.Drawing.Size(373, 191);
-            this.btnSendToRM_old.TabIndex = 6;
-            this.btnSendToRM_old.Text = "Send To RM";
-            this.btnSendToRM_old.UseVisualStyleBackColor = true;
-            this.btnSendToRM_old.Click += new System.EventHandler(this.btnSendToRM_Click);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.cbActivities);
-            this.groupBox2.Controls.Add(this.edtComments);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.edtHours);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.dtSpentOn);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.edtIssueID);
-            this.groupBox2.Controls.Add(this.btnSendToRM_old);
-            this.groupBox2.Location = new System.Drawing.Point(1936, 1658);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1286, 838);
-            this.groupBox2.TabIndex = 8;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "RedMine Single";
-            // 
-            // cbActivities
-            // 
-            this.cbActivities.FormattingEnabled = true;
-            this.cbActivities.Location = new System.Drawing.Point(200, 301);
-            this.cbActivities.Name = "cbActivities";
-            this.cbActivities.Size = new System.Drawing.Size(507, 37);
-            this.cbActivities.TabIndex = 17;
-            // 
-            // edtComments
-            // 
-            this.edtComments.Location = new System.Drawing.Point(200, 364);
-            this.edtComments.MaxLength = 255;
-            this.edtComments.Multiline = true;
-            this.edtComments.Name = "edtComments";
-            this.edtComments.Size = new System.Drawing.Size(978, 114);
-            this.edtComments.TabIndex = 16;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(23, 370);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(129, 29);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Comments";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(23, 290);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 29);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Activity";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 216);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 29);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Hours";
-            // 
-            // edtHours
-            // 
-            this.edtHours.Location = new System.Drawing.Point(200, 210);
-            this.edtHours.Name = "edtHours";
-            this.edtHours.Size = new System.Drawing.Size(507, 35);
-            this.edtHours.TabIndex = 11;
-            this.edtHours.Text = "1.6";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 135);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 29);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Spent On";
-            // 
-            // dtSpentOn
-            // 
-            this.dtSpentOn.Location = new System.Drawing.Point(200, 125);
-            this.dtSpentOn.Name = "dtSpentOn";
-            this.dtSpentOn.Size = new System.Drawing.Size(507, 35);
-            this.dtSpentOn.TabIndex = 9;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 68);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 29);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "issue ID";
-            // 
-            // edtIssueID
-            // 
-            this.edtIssueID.Location = new System.Drawing.Point(200, 68);
-            this.edtIssueID.Name = "edtIssueID";
-            this.edtIssueID.Size = new System.Drawing.Size(507, 35);
-            this.edtIssueID.TabIndex = 7;
-            this.edtIssueID.Text = "1817";
             // 
             // dataSet1
             // 
@@ -312,235 +162,13 @@ namespace TrackingTime2Redmine
             this.updatedatDataGridViewTextBoxColumn,
             this.jsonDataGridViewTextBoxColumn});
             this.gridUnmapped.DataSource = this.datumBindingSource;
-            this.gridUnmapped.Location = new System.Drawing.Point(38, 150);
+            this.gridUnmapped.Location = new System.Drawing.Point(24, 99);
+            this.gridUnmapped.Margin = new System.Windows.Forms.Padding(2);
             this.gridUnmapped.Name = "gridUnmapped";
             this.gridUnmapped.RowHeadersWidth = 92;
             this.gridUnmapped.RowTemplate.Height = 37;
-            this.gridUnmapped.Size = new System.Drawing.Size(1160, 1405);
+            this.gridUnmapped.Size = new System.Drawing.Size(759, 969);
             this.gridUnmapped.TabIndex = 9;
-            // 
-            // dtFrom
-            // 
-            this.dtFrom.Location = new System.Drawing.Point(38, 34);
-            this.dtFrom.Name = "dtFrom";
-            this.dtFrom.Size = new System.Drawing.Size(414, 35);
-            this.dtFrom.TabIndex = 10;
-            // 
-            // dtUntil
-            // 
-            this.dtUntil.Location = new System.Drawing.Point(38, 88);
-            this.dtUntil.Name = "dtUntil";
-            this.dtUntil.Size = new System.Drawing.Size(414, 35);
-            this.dtUntil.TabIndex = 11;
-            // 
-            // btGetTtEntries
-            // 
-            this.btGetTtEntries.Location = new System.Drawing.Point(469, 34);
-            this.btGetTtEntries.Name = "btGetTtEntries";
-            this.btGetTtEntries.Size = new System.Drawing.Size(308, 91);
-            this.btGetTtEntries.TabIndex = 12;
-            this.btGetTtEntries.Text = "Fetch TT Entries";
-            this.btGetTtEntries.UseVisualStyleBackColor = true;
-            this.btGetTtEntries.Click += new System.EventHandler(this.btGetTtEntries_Click);
-            // 
-            // btnStartMapping
-            // 
-            this.btnStartMapping.Enabled = false;
-            this.btnStartMapping.Location = new System.Drawing.Point(801, 34);
-            this.btnStartMapping.Name = "btnStartMapping";
-            this.btnStartMapping.Size = new System.Drawing.Size(397, 89);
-            this.btnStartMapping.TabIndex = 13;
-            this.btnStartMapping.Text = "Start Mapping";
-            this.btnStartMapping.UseVisualStyleBackColor = true;
-            this.btnStartMapping.Click += new System.EventHandler(this.btnStartMapping_Click);
-            // 
-            // gridMapped
-            // 
-            this.gridMapped.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridMapped.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.SpentOn,
-            this.RmTask,
-            this.TotalHours,
-            this.RMText,
-            this.activity_id,
-            this.TT_entries});
-            this.gridMapped.Location = new System.Drawing.Point(1220, 360);
-            this.gridMapped.MultiSelect = false;
-            this.gridMapped.Name = "gridMapped";
-            this.gridMapped.ReadOnly = true;
-            this.gridMapped.RowHeadersWidth = 92;
-            this.gridMapped.RowTemplate.Height = 37;
-            this.gridMapped.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridMapped.Size = new System.Drawing.Size(1230, 1195);
-            this.gridMapped.TabIndex = 18;
-            this.gridMapped.SelectionChanged += new System.EventHandler(this.gridMapped_SelectionChanged);
-            // 
-            // gridRmEntries
-            // 
-            this.gridRmEntries.AutoGenerateColumns = false;
-            this.gridRmEntries.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridRmEntries.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.issueidDataGridViewTextBoxColumn,
-            this.spentonDataGridViewTextBoxColumn,
-            this.hoursDataGridViewTextBoxColumn,
-            this.activityidDataGridViewTextBoxColumn,
-            this.commentsDataGridViewTextBoxColumn,
-            this.useridDataGridViewTextBoxColumn1});
-            this.gridRmEntries.DataSource = this.timeEntryBindingSource;
-            this.gridRmEntries.Location = new System.Drawing.Point(2477, 150);
-            this.gridRmEntries.Name = "gridRmEntries";
-            this.gridRmEntries.RowHeadersWidth = 92;
-            this.gridRmEntries.RowTemplate.Height = 37;
-            this.gridRmEntries.Size = new System.Drawing.Size(1450, 1405);
-            this.gridRmEntries.TabIndex = 19;
-            // 
-            // btnSendToRm
-            // 
-            this.btnSendToRm.Location = new System.Drawing.Point(3392, 34);
-            this.btnSendToRm.Name = "btnSendToRm";
-            this.btnSendToRm.Size = new System.Drawing.Size(535, 89);
-            this.btnSendToRm.TabIndex = 20;
-            this.btnSendToRm.Text = "Ok, Send!";
-            this.btnSendToRm.UseVisualStyleBackColor = true;
-            this.btnSendToRm.Click += new System.EventHandler(this.btnSendToRm_Click_1);
-            // 
-            // btnGetRmEntries
-            // 
-            this.btnGetRmEntries.Location = new System.Drawing.Point(2477, 34);
-            this.btnGetRmEntries.Name = "btnGetRmEntries";
-            this.btnGetRmEntries.Size = new System.Drawing.Size(539, 89);
-            this.btnGetRmEntries.TabIndex = 21;
-            this.btnGetRmEntries.Text = "Get RM Entries";
-            this.btnGetRmEntries.UseVisualStyleBackColor = true;
-            this.btnGetRmEntries.Click += new System.EventHandler(this.btnGetRmEntries_Click);
-            // 
-            // boxEditEntry
-            // 
-            this.boxEditEntry.Controls.Add(this.button1);
-            this.boxEditEntry.Controls.Add(this.textBox3);
-            this.boxEditEntry.Controls.Add(this.label11);
-            this.boxEditEntry.Controls.Add(this.comboBox1);
-            this.boxEditEntry.Controls.Add(this.label10);
-            this.boxEditEntry.Controls.Add(this.richTextBox1);
-            this.boxEditEntry.Controls.Add(this.label9);
-            this.boxEditEntry.Controls.Add(this.textBox2);
-            this.boxEditEntry.Controls.Add(this.textBox1);
-            this.boxEditEntry.Controls.Add(this.dateTimePicker1);
-            this.boxEditEntry.Controls.Add(this.label8);
-            this.boxEditEntry.Controls.Add(this.label7);
-            this.boxEditEntry.Controls.Add(this.label6);
-            this.boxEditEntry.Location = new System.Drawing.Point(1220, 34);
-            this.boxEditEntry.Name = "boxEditEntry";
-            this.boxEditEntry.Size = new System.Drawing.Size(1230, 320);
-            this.boxEditEntry.TabIndex = 22;
-            this.boxEditEntry.TabStop = false;
-            this.boxEditEntry.Text = "Edit Entry";
-            // 
-            // SpentOn
-            // 
-            this.SpentOn.DataPropertyName = "SpentOn";
-            this.SpentOn.HeaderText = "Spent On";
-            this.SpentOn.MinimumWidth = 11;
-            this.SpentOn.Name = "SpentOn";
-            this.SpentOn.ReadOnly = true;
-            this.SpentOn.Width = 225;
-            // 
-            // RmTask
-            // 
-            this.RmTask.DataPropertyName = "RmTask";
-            this.RmTask.HeaderText = "RM Task";
-            this.RmTask.MinimumWidth = 11;
-            this.RmTask.Name = "RmTask";
-            this.RmTask.ReadOnly = true;
-            this.RmTask.Width = 225;
-            // 
-            // TotalHours
-            // 
-            this.TotalHours.DataPropertyName = "TotalHours";
-            this.TotalHours.HeaderText = "Total Hours";
-            this.TotalHours.MinimumWidth = 11;
-            this.TotalHours.Name = "TotalHours";
-            this.TotalHours.ReadOnly = true;
-            this.TotalHours.Width = 225;
-            // 
-            // RMText
-            // 
-            this.RMText.DataPropertyName = "Text";
-            this.RMText.HeaderText = "Notes";
-            this.RMText.MinimumWidth = 11;
-            this.RMText.Name = "RMText";
-            this.RMText.ReadOnly = true;
-            this.RMText.Width = 225;
-            // 
-            // activity_id
-            // 
-            this.activity_id.DataPropertyName = "activity_id";
-            this.activity_id.HeaderText = "Activity";
-            this.activity_id.MinimumWidth = 11;
-            this.activity_id.Name = "activity_id";
-            this.activity_id.ReadOnly = true;
-            this.activity_id.Width = 225;
-            // 
-            // TT_entries
-            // 
-            this.TT_entries.DataPropertyName = "TT_entries";
-            this.TT_entries.HeaderText = "TT Entries";
-            this.TT_entries.MinimumWidth = 11;
-            this.TT_entries.Name = "TT_entries";
-            this.TT_entries.ReadOnly = true;
-            this.TT_entries.Width = 225;
-            // 
-            // issueidDataGridViewTextBoxColumn
-            // 
-            this.issueidDataGridViewTextBoxColumn.DataPropertyName = "issue_id";
-            this.issueidDataGridViewTextBoxColumn.HeaderText = "issue_id";
-            this.issueidDataGridViewTextBoxColumn.MinimumWidth = 11;
-            this.issueidDataGridViewTextBoxColumn.Name = "issueidDataGridViewTextBoxColumn";
-            this.issueidDataGridViewTextBoxColumn.Width = 225;
-            // 
-            // spentonDataGridViewTextBoxColumn
-            // 
-            this.spentonDataGridViewTextBoxColumn.DataPropertyName = "spent_on";
-            this.spentonDataGridViewTextBoxColumn.HeaderText = "spent_on";
-            this.spentonDataGridViewTextBoxColumn.MinimumWidth = 11;
-            this.spentonDataGridViewTextBoxColumn.Name = "spentonDataGridViewTextBoxColumn";
-            this.spentonDataGridViewTextBoxColumn.Width = 225;
-            // 
-            // hoursDataGridViewTextBoxColumn
-            // 
-            this.hoursDataGridViewTextBoxColumn.DataPropertyName = "hours";
-            this.hoursDataGridViewTextBoxColumn.HeaderText = "hours";
-            this.hoursDataGridViewTextBoxColumn.MinimumWidth = 11;
-            this.hoursDataGridViewTextBoxColumn.Name = "hoursDataGridViewTextBoxColumn";
-            this.hoursDataGridViewTextBoxColumn.Width = 225;
-            // 
-            // activityidDataGridViewTextBoxColumn
-            // 
-            this.activityidDataGridViewTextBoxColumn.DataPropertyName = "activity_id";
-            this.activityidDataGridViewTextBoxColumn.HeaderText = "activity_id";
-            this.activityidDataGridViewTextBoxColumn.MinimumWidth = 11;
-            this.activityidDataGridViewTextBoxColumn.Name = "activityidDataGridViewTextBoxColumn";
-            this.activityidDataGridViewTextBoxColumn.Width = 225;
-            // 
-            // commentsDataGridViewTextBoxColumn
-            // 
-            this.commentsDataGridViewTextBoxColumn.DataPropertyName = "comments";
-            this.commentsDataGridViewTextBoxColumn.HeaderText = "comments";
-            this.commentsDataGridViewTextBoxColumn.MinimumWidth = 11;
-            this.commentsDataGridViewTextBoxColumn.Name = "commentsDataGridViewTextBoxColumn";
-            this.commentsDataGridViewTextBoxColumn.Width = 225;
-            // 
-            // useridDataGridViewTextBoxColumn1
-            // 
-            this.useridDataGridViewTextBoxColumn1.DataPropertyName = "user_id";
-            this.useridDataGridViewTextBoxColumn1.HeaderText = "user_id";
-            this.useridDataGridViewTextBoxColumn1.MinimumWidth = 11;
-            this.useridDataGridViewTextBoxColumn1.Name = "useridDataGridViewTextBoxColumn1";
-            this.useridDataGridViewTextBoxColumn1.Width = 225;
-            // 
-            // timeEntryBindingSource
-            // 
-            this.timeEntryBindingSource.DataSource = typeof(TrackingTime2Redmine.Models.TimeEntry);
             // 
             // eventtypeDataGridViewTextBoxColumn
             // 
@@ -927,170 +555,137 @@ namespace TrackingTime2Redmine
             // 
             this.datumBindingSource.DataSource = typeof(TrackingTime2Redmine.Models.Datum);
             // 
+            // dtFrom
+            // 
+            this.dtFrom.Location = new System.Drawing.Point(24, 23);
+            this.dtFrom.Margin = new System.Windows.Forms.Padding(2);
+            this.dtFrom.Name = "dtFrom";
+            this.dtFrom.Size = new System.Drawing.Size(268, 26);
+            this.dtFrom.TabIndex = 10;
+            // 
+            // dtUntil
+            // 
+            this.dtUntil.Location = new System.Drawing.Point(24, 61);
+            this.dtUntil.Margin = new System.Windows.Forms.Padding(2);
+            this.dtUntil.Name = "dtUntil";
+            this.dtUntil.Size = new System.Drawing.Size(268, 26);
+            this.dtUntil.TabIndex = 11;
+            // 
+            // btGetTtEntries
+            // 
+            this.btGetTtEntries.Location = new System.Drawing.Point(301, 23);
+            this.btGetTtEntries.Margin = new System.Windows.Forms.Padding(2);
+            this.btGetTtEntries.Name = "btGetTtEntries";
+            this.btGetTtEntries.Size = new System.Drawing.Size(198, 63);
+            this.btGetTtEntries.TabIndex = 12;
+            this.btGetTtEntries.Text = "Fetch TT Entries";
+            this.btGetTtEntries.UseVisualStyleBackColor = true;
+            this.btGetTtEntries.Click += new System.EventHandler(this.btGetTtEntries_Click);
+            // 
+            // btnStartMapping
+            // 
+            this.btnStartMapping.Enabled = false;
+            this.btnStartMapping.Location = new System.Drawing.Point(528, 23);
+            this.btnStartMapping.Margin = new System.Windows.Forms.Padding(2);
+            this.btnStartMapping.Name = "btnStartMapping";
+            this.btnStartMapping.Size = new System.Drawing.Size(255, 61);
+            this.btnStartMapping.TabIndex = 13;
+            this.btnStartMapping.Text = "Start Mapping";
+            this.btnStartMapping.UseVisualStyleBackColor = true;
+            this.btnStartMapping.Click += new System.EventHandler(this.btnStartMapping_Click);
+            // 
+            // btnSendToRm
+            // 
+            this.btnSendToRm.Location = new System.Drawing.Point(1464, 24);
+            this.btnSendToRm.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSendToRm.Name = "btnSendToRm";
+            this.btnSendToRm.Size = new System.Drawing.Size(344, 61);
+            this.btnSendToRm.TabIndex = 20;
+            this.btnSendToRm.Text = "Ok, Send!";
+            this.btnSendToRm.UseVisualStyleBackColor = true;
+            this.btnSendToRm.Click += new System.EventHandler(this.btnSendToRm_Click_1);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.gridJrEntries);
+            this.panel1.Location = new System.Drawing.Point(788, 99);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1020, 969);
+            this.panel1.TabIndex = 26;
+            // 
+            // gridJrEntries
+            // 
+            this.gridJrEntries.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridJrEntries.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridJrEntries.Location = new System.Drawing.Point(0, 0);
+            this.gridJrEntries.Margin = new System.Windows.Forms.Padding(2);
+            this.gridJrEntries.Name = "gridJrEntries";
+            this.gridJrEntries.RowHeadersWidth = 92;
+            this.gridJrEntries.RowTemplate.Height = 37;
+            this.gridJrEntries.Size = new System.Drawing.Size(1020, 969);
+            this.gridJrEntries.TabIndex = 20;
+            // 
+            // RmTimeEntryBindingSource
+            // 
+            this.RmTimeEntryBindingSource.AllowNew = false;
+            this.RmTimeEntryBindingSource.DataSource = typeof(TrackingTime2Redmine.Models.RmTimeEntry);
+            // 
+            // tTEntriesBindingSource
+            // 
+            this.tTEntriesBindingSource.DataSource = typeof(TrackingTime2Redmine.Models.TTEntries);
+            // 
+            // JrTimeEntryBindingSource
+            // 
+            this.JrTimeEntryBindingSource.AllowNew = false;
+            this.JrTimeEntryBindingSource.DataSource = typeof(TrackingTime2Redmine.Models.JrTimeEntry);
+            // 
             // mapEntryBindingSource
             // 
+            this.mapEntryBindingSource.AllowNew = false;
             this.mapEntryBindingSource.DataSource = typeof(TrackingTime2Redmine.Models.MapEntry);
             // 
             // rMEntryBindingSource
             // 
+            this.rMEntryBindingSource.AllowNew = false;
             this.rMEntryBindingSource.DataSource = typeof(TrackingTime2Redmine.Models.RMEntry);
             // 
-            // label6
+            // jrTimeEntryBindingSource1
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(30, 45);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(120, 29);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Spent On:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(35, 101);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(115, 29);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "RM Task:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 163);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(144, 29);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "Total Hours:";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(156, 40);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(394, 35);
-            this.dateTimePicker1.TabIndex = 3;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(156, 98);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(155, 35);
-            this.textBox1.TabIndex = 4;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(156, 160);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(133, 35);
-            this.textBox2.TabIndex = 5;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(617, 40);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(66, 29);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "Text:";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(581, 72);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(643, 165);
-            this.richTextBox1.TabIndex = 7;
-            this.richTextBox1.Text = "";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(64, 222);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(86, 29);
-            this.label10.TabIndex = 8;
-            this.label10.Text = "Activity";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(156, 219);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(380, 37);
-            this.comboBox1.TabIndex = 9;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(18, 282);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(132, 29);
-            this.label11.TabIndex = 10;
-            this.label11.Text = "TT Entries:";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(156, 279);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(419, 35);
-            this.textBox3.TabIndex = 11;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(581, 243);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(643, 71);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.jrTimeEntryBindingSource1.DataSource = typeof(TrackingTime2Redmine.Models.JrTimeEntry);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(4376, 2230);
-            this.Controls.Add(this.boxEditEntry);
-            this.Controls.Add(this.btnGetRmEntries);
+            this.ClientSize = new System.Drawing.Size(1827, 1122);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSendToRm);
-            this.Controls.Add(this.gridRmEntries);
-            this.Controls.Add(this.gridMapped);
             this.Controls.Add(this.btnStartMapping);
             this.Controls.Add(this.btGetTtEntries);
             this.Controls.Add(this.dtUntil);
             this.Controls.Add(this.dtFrom);
             this.Controls.Add(this.gridUnmapped);
-            this.Controls.Add(this.groupBox2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.Text = "TrackingTime2RedMine";
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridUnmapped)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridMapped)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridRmEntries)).EndInit();
-            this.boxEditEntry.ResumeLayout(false);
-            this.boxEditEntry.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.timeEntryBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datumBindingSource)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridJrEntries)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RmTimeEntryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tTEntriesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.JrTimeEntryBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mapEntryBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rMEntryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jrTimeEntryBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btnSendToRM_old;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox edtHours;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dtSpentOn;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox edtIssueID;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox edtComments;
         private System.Data.DataSet dataSet1;
         private System.Windows.Forms.DataGridView gridUnmapped;
         private System.Windows.Forms.DateTimePicker dtFrom;
@@ -1144,40 +739,15 @@ namespace TrackingTime2Redmine
         private System.Windows.Forms.DataGridViewTextBoxColumn updatedatDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn jsonDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnStartMapping;
-        private System.Windows.Forms.DataGridView gridMapped;
         private System.Windows.Forms.BindingSource mapEntryBindingSource;
-        private System.Windows.Forms.DataGridView gridRmEntries;
-        private System.Windows.Forms.DataGridViewTextBoxColumn issueidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn spentonDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn hoursDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn activityidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn commentsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn useridDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.BindingSource timeEntryBindingSource;
+        private System.Windows.Forms.BindingSource RmTimeEntryBindingSource;
         private System.Windows.Forms.BindingSource rMEntryBindingSource;
         private System.Windows.Forms.Button btnSendToRm;
-        private System.Windows.Forms.Button btnGetRmEntries;
-        private System.Windows.Forms.GroupBox boxEditEntry;
-        private System.Windows.Forms.ComboBox cbActivities;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SpentOn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RmTask;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TotalHours;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RMText;
-        private System.Windows.Forms.DataGridViewTextBoxColumn activity_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TT_entries;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView gridJrEntries;
+        private System.Windows.Forms.BindingSource JrTimeEntryBindingSource;
+        private System.Windows.Forms.BindingSource tTEntriesBindingSource;
+        private System.Windows.Forms.BindingSource jrTimeEntryBindingSource1;
     }
 }
 

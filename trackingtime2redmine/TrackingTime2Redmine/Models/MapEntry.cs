@@ -25,9 +25,12 @@ namespace TrackingTime2Redmine.Models
     {
         public DateTime SpentOn;
         public int RmTask;
+        public string Title;
+        public string JrTask;
+        public string JrKey;
         public double TotalHours;
         public string Text;
-        public RMActivity Activity;
+        public RMActivity RmActivity;
         public List<Datum> TtEntries;
     }
 }

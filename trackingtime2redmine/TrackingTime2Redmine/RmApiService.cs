@@ -83,6 +83,7 @@ namespace TrackingTime2Redmine
             }
             catch (RedMineException ex)
             {
+                string errorText = ex.Message;
                 // Log errorText
                 return HttpStatusCode.BadRequest;
             }
