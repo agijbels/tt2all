@@ -158,7 +158,7 @@ namespace TrackingTime2Redmine.Models
     public class TaskBilling
     {
         [JsonProperty("is_billable")]
-        public bool is_billable { get; set; }
+        public object is_billable { get; set; }
 
         [JsonProperty("hourly_rate")]
         public object hourly_rate { get; set; }
